@@ -1,0 +1,5 @@
+step,duration_seconds
+postgres_sql,2.4648391539999466
+postgres_json,73.75457053199989
+mongo_catalog,0.05575081000006321
+mongo_sales,0.957033913000032

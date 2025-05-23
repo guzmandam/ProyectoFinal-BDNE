@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: pg_benchmark
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: commerce
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  postgres_json:
+    image: postgres:16
+    container_name: pg_benchmark_json
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: commerce_sql_json
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_data_json:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:7
+    container_name: mongo_benchmark
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: commerce
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  pg_data:
+  pg_data_json:
+  mongo_data:
+
