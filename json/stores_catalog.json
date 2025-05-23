@@ -1,0 +1,2167 @@
+[
+  {
+    "store_name": "Vargas-Gurule",
+    "address": "Prolongación Norte Ibarra 534 624, San Ignacio de la Montaña, AGS 99118-3842",
+    "employees": [
+      {
+        "first_name": "Ángela",
+        "last_name": "Menéndez",
+        "position": "Cajero"
+      },
+      {
+        "first_name": "Itzel",
+        "last_name": "Padrón",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Sergio",
+        "last_name": "Varela",
+        "position": "Gerente"
+      },
+      {
+        "first_name": "Ricardo",
+        "last_name": "Zepeda",
+        "position": "Gerente"
+      },
+      {
+        "first_name": "Darío",
+        "last_name": "Bravo",
+        "position": "Cajero"
+      }
+    ],
+    "inventory": [
+      {
+        "product": {
+          "name": "codificar asíncrona balanceado",
+          "category": "Veritatis",
+          "price": 842.46
+        },
+        "quantity": 128
+      },
+      {
+        "product": {
+          "name": "desafío óptima orientado a equipos",
+          "category": "Veritatis",
+          "price": 531.47
+        },
+        "quantity": 135
+      },
+      {
+        "product": {
+          "name": "inteligencia artificial explícita personalizable",
+          "category": "Tempore",
+          "price": 605.71
+        },
+        "quantity": 40
+      },
+      {
+        "product": {
+          "name": "enfoque tolerante a fallos universal",
+          "category": "Deserunt",
+          "price": 793.12
+        },
+        "quantity": 14
+      },
+      {
+        "product": {
+          "name": "extranet dedicada enfocado a la calidad",
+          "category": "Culpa",
+          "price": 579.47
+        },
+        "quantity": 130
+      },
+      {
+        "product": {
+          "name": "circuito regional reducido",
+          "category": "Veritatis",
+          "price": 273.6
+        },
+        "quantity": 20
+      },
+      {
+        "product": {
+          "name": "línea segura nacional basado en funcionalidad",
+          "category": "Culpa",
+          "price": 681.88
+        },
+        "quantity": 47
+      },
+      {
+        "product": {
+          "name": "flexibilidad sensible al contexto innovador",
+          "category": "Culpa",
+          "price": 703.31
+        },
+        "quantity": 17
+      },
+      {
+        "product": {
+          "name": "soporte cliente-servidor enfocado al cliente",
+          "category": "Corporis",
+          "price": 422.42
+        },
+        "quantity": 152
+      },
+      {
+        "product": {
+          "name": "arquitectura orientada a soluciones diverso",
+          "category": "Corporis",
+          "price": 384.71
+        },
+        "quantity": 17
+      },
+      {
+        "product": {
+          "name": "encriptar alto nivel recontextualizado",
+          "category": "Alias",
+          "price": 377.04
+        },
+        "quantity": 172
+      },
+      {
+        "product": {
+          "name": "analista no-volátil compartible",
+          "category": "Et",
+          "price": 699.65
+        },
+        "quantity": 60
+      },
+      {
+        "product": {
+          "name": "previsión 24 horas exclusivo",
+          "category": "Veritatis",
+          "price": 222.54
+        },
+        "quantity": 103
+      },
+      {
+        "product": {
+          "name": "matrices estática personalizable",
+          "category": "Deserunt",
+          "price": 873.07
+        },
+        "quantity": 30
+      },
+      {
+        "product": {
+          "name": "hardware monitorizada por red de tamaño adecuado",
+          "category": "Alias",
+          "price": 610.93
+        },
+        "quantity": 145
+      },
+      {
+        "product": {
+          "name": "alianza 4ta generación enfocado al cliente",
+          "category": "Harum",
+          "price": 742.84
+        },
+        "quantity": 63
+      },
+      {
+        "product": {
+          "name": "jerarquía valor añadido intuitivo",
+          "category": "Alias",
+          "price": 760.01
+        },
+        "quantity": 148
+      },
+      {
+        "product": {
+          "name": "estructura no-volátil en toda la empresa",
+          "category": "Exercitationem",
+          "price": 213.46
+        },
+        "quantity": 152
+      },
+      {
+        "product": {
+          "name": "soporte heurística configurable",
+          "category": "Quisquam",
+          "price": 830.26
+        },
+        "quantity": 10
+      },
+      {
+        "product": {
+          "name": "monitorizar 3ra generación digitalizado",
+          "category": "Culpa",
+          "price": 757.0
+        },
+        "quantity": 158
+      },
+      {
+        "product": {
+          "name": "paradigma nueva generación distribuido",
+          "category": "Deserunt",
+          "price": 115.99
+        },
+        "quantity": 20
+      },
+      {
+        "product": {
+          "name": "interfaz misión crítica programable",
+          "category": "Et",
+          "price": 752.12
+        },
+        "quantity": 107
+      },
+      {
+        "product": {
+          "name": "interfaz heurística compatible",
+          "category": "Corporis",
+          "price": 383.23
+        },
+        "quantity": 168
+      },
+      {
+        "product": {
+          "name": "habilidad uniforme en red",
+          "category": "Culpa",
+          "price": 511.98
+        },
+        "quantity": 149
+      },
+      {
+        "product": {
+          "name": "caja de herramientas nacional de arquitectura abierta",
+          "category": "Veritatis",
+          "price": 604.01
+        },
+        "quantity": 144
+      },
+      {
+        "product": {
+          "name": "red de area local direccional administrado",
+          "category": "Veritatis",
+          "price": 661.45
+        },
+        "quantity": 133
+      },
+      {
+        "product": {
+          "name": "estrategia recíproca visionario",
+          "category": "Quisquam",
+          "price": 431.29
+        },
+        "quantity": 80
+      },
+      {
+        "product": {
+          "name": "array transicional proactivo",
+          "category": "Tempore",
+          "price": 641.23
+        },
+        "quantity": 66
+      },
+      {
+        "product": {
+          "name": "base de datos basado en contenido opcional",
+          "category": "Harum",
+          "price": 402.4
+        },
+        "quantity": 52
+      },
+      {
+        "product": {
+          "name": "proyecto nacional centrado en el usuario",
+          "category": "Harum",
+          "price": 536.47
+        },
+        "quantity": 171
+      },
+      {
+        "product": {
+          "name": "conglomeración global seguro",
+          "category": "Tempore",
+          "price": 861.48
+        },
+        "quantity": 183
+      },
+      {
+        "product": {
+          "name": "array analizada digitalizado",
+          "category": "Et",
+          "price": 223.52
+        },
+        "quantity": 80
+      },
+      {
+        "product": {
+          "name": "sistema abierto secundaria exclusivo",
+          "category": "Exercitationem",
+          "price": 516.59
+        },
+        "quantity": 61
+      },
+      {
+        "product": {
+          "name": "extranet discreta enfocado",
+          "category": "Veritatis",
+          "price": 816.94
+        },
+        "quantity": 67
+      },
+      {
+        "product": {
+          "name": "estrategia metódica exclusivo",
+          "category": "Deserunt",
+          "price": 129.2
+        },
+        "quantity": 101
+      },
+      {
+        "product": {
+          "name": "iniciativa heurística total",
+          "category": "Harum",
+          "price": 50.6
+        },
+        "quantity": 33
+      },
+      {
+        "product": {
+          "name": "complejidad tolerancia cero exclusivo",
+          "category": "Tempore",
+          "price": 843.64
+        },
+        "quantity": 171
+      },
+      {
+        "product": {
+          "name": "capacidad móvil multiplataforma",
+          "category": "Harum",
+          "price": 281.48
+        },
+        "quantity": 165
+      },
+      {
+        "product": {
+          "name": "interfaz local descentralizado",
+          "category": "Corporis",
+          "price": 90.23
+        },
+        "quantity": 76
+      },
+      {
+        "product": {
+          "name": "línea segura 4ta generación total",
+          "category": "Veritatis",
+          "price": 678.32
+        },
+        "quantity": 117
+      },
+      {
+        "product": {
+          "name": "extranet ejecutiva compatible",
+          "category": "Tempore",
+          "price": 162.37
+        },
+        "quantity": 80
+      },
+      {
+        "product": {
+          "name": "medición tolerancia cero multicanal",
+          "category": "Quisquam",
+          "price": 541.28
+        },
+        "quantity": 192
+      },
+      {
+        "product": {
+          "name": "interfaz metódica fundamental",
+          "category": "Deserunt",
+          "price": 167.59
+        },
+        "quantity": 18
+      },
+      {
+        "product": {
+          "name": "portal dinámica multilateral",
+          "category": "Veritatis",
+          "price": 683.3
+        },
+        "quantity": 2
+      },
+      {
+        "product": {
+          "name": "array tolerante a fallos expandido",
+          "category": "Harum",
+          "price": 756.49
+        },
+        "quantity": 117
+      },
+      {
+        "product": {
+          "name": "infraestructura maximizada totalmente configurable",
+          "category": "Exercitationem",
+          "price": 83.41
+        },
+        "quantity": 159
+      },
+      {
+        "product": {
+          "name": "base de trabajo nacional total",
+          "category": "Et",
+          "price": 228.57
+        },
+        "quantity": 144
+      },
+      {
+        "product": {
+          "name": "implementación incremental implementado",
+          "category": "Alias",
+          "price": 157.08
+        },
+        "quantity": 25
+      },
+      {
+        "product": {
+          "name": "enfoque terciaria sincronizado",
+          "category": "Tempore",
+          "price": 12.15
+        },
+        "quantity": 18
+      },
+      {
+        "product": {
+          "name": "migración innovadora configurable",
+          "category": "Veritatis",
+          "price": 169.3
+        },
+        "quantity": 137
+      }
+    ]
+  },
+  {
+    "store_name": "Barrientos-Guevara S.A. de C.V.",
+    "address": "Privada Norte Tafoya 841 241, Nueva Grecia, NL 53487",
+    "employees": [
+      {
+        "first_name": "Alvaro",
+        "last_name": "Pulido",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Sofía",
+        "last_name": "Martínez",
+        "position": "Gerente"
+      },
+      {
+        "first_name": "Gustavo",
+        "last_name": "Urrutia",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Hermelinda",
+        "last_name": "Palomino",
+        "position": "Gerente"
+      },
+      {
+        "first_name": "Vanesa",
+        "last_name": "Medina",
+        "position": "Vendedor"
+      }
+    ],
+    "inventory": [
+      {
+        "product": {
+          "name": "interfaz heurística compatible",
+          "category": "Corporis",
+          "price": 383.23
+        },
+        "quantity": 113
+      },
+      {
+        "product": {
+          "name": "soporte 3ra generación versátil",
+          "category": "Exercitationem",
+          "price": 954.05
+        },
+        "quantity": 141
+      },
+      {
+        "product": {
+          "name": "proyecto nacional centrado en el usuario",
+          "category": "Harum",
+          "price": 536.47
+        },
+        "quantity": 180
+      },
+      {
+        "product": {
+          "name": "analista explícita monitoreado",
+          "category": "Et",
+          "price": 101.23
+        },
+        "quantity": 109
+      },
+      {
+        "product": {
+          "name": "función basado en necesidades exclusivo",
+          "category": "Corporis",
+          "price": 398.65
+        },
+        "quantity": 143
+      },
+      {
+        "product": {
+          "name": "previsión basado en contenido basado en funcionalidad",
+          "category": "Veritatis",
+          "price": 202.84
+        },
+        "quantity": 2
+      },
+      {
+        "product": {
+          "name": "flexibilidad sensible al contexto innovador",
+          "category": "Culpa",
+          "price": 703.31
+        },
+        "quantity": 28
+      },
+      {
+        "product": {
+          "name": "medición tolerancia cero multicanal",
+          "category": "Quisquam",
+          "price": 541.28
+        },
+        "quantity": 19
+      },
+      {
+        "product": {
+          "name": "array analizada digitalizado",
+          "category": "Et",
+          "price": 223.52
+        },
+        "quantity": 176
+      },
+      {
+        "product": {
+          "name": "infraestructura maximizada totalmente configurable",
+          "category": "Exercitationem",
+          "price": 83.41
+        },
+        "quantity": 38
+      },
+      {
+        "product": {
+          "name": "arquitectura orientada a soluciones diverso",
+          "category": "Corporis",
+          "price": 384.71
+        },
+        "quantity": 139
+      },
+      {
+        "product": {
+          "name": "hardware monitorizada por red de tamaño adecuado",
+          "category": "Alias",
+          "price": 610.93
+        },
+        "quantity": 9
+      },
+      {
+        "product": {
+          "name": "mediante nacional virtual",
+          "category": "Tempore",
+          "price": 232.9
+        },
+        "quantity": 94
+      },
+      {
+        "product": {
+          "name": "interfaz local descentralizado",
+          "category": "Corporis",
+          "price": 90.23
+        },
+        "quantity": 149
+      },
+      {
+        "product": {
+          "name": "matrices estática personalizable",
+          "category": "Deserunt",
+          "price": 873.07
+        },
+        "quantity": 141
+      },
+      {
+        "product": {
+          "name": "utilización tolerancia cero clonado",
+          "category": "Exercitationem",
+          "price": 871.17
+        },
+        "quantity": 37
+      },
+      {
+        "product": {
+          "name": "alianza 4ta generación enfocado al cliente",
+          "category": "Harum",
+          "price": 742.84
+        },
+        "quantity": 110
+      },
+      {
+        "product": {
+          "name": "encriptar alto nivel recontextualizado",
+          "category": "Alias",
+          "price": 377.04
+        },
+        "quantity": 32
+      },
+      {
+        "product": {
+          "name": "definición multimedia clonado",
+          "category": "Et",
+          "price": 995.17
+        },
+        "quantity": 10
+      },
+      {
+        "product": {
+          "name": "capacidad móvil multiplataforma",
+          "category": "Harum",
+          "price": 281.48
+        },
+        "quantity": 78
+      },
+      {
+        "product": {
+          "name": "inteligencia artificial explícita personalizable",
+          "category": "Tempore",
+          "price": 605.71
+        },
+        "quantity": 93
+      },
+      {
+        "product": {
+          "name": "enfoque regional multiplataforma",
+          "category": "Harum",
+          "price": 670.63
+        },
+        "quantity": 10
+      },
+      {
+        "product": {
+          "name": "estructura de precios homogénea optimizado",
+          "category": "Et",
+          "price": 957.43
+        },
+        "quantity": 91
+      },
+      {
+        "product": {
+          "name": "política nueva generación mejorado",
+          "category": "Alias",
+          "price": 767.01
+        },
+        "quantity": 53
+      },
+      {
+        "product": {
+          "name": "migración innovadora configurable",
+          "category": "Veritatis",
+          "price": 169.3
+        },
+        "quantity": 174
+      },
+      {
+        "product": {
+          "name": "estrategia metódica exclusivo",
+          "category": "Deserunt",
+          "price": 129.2
+        },
+        "quantity": 63
+      },
+      {
+        "product": {
+          "name": "interfaz metódica fundamental",
+          "category": "Deserunt",
+          "price": 167.59
+        },
+        "quantity": 170
+      },
+      {
+        "product": {
+          "name": "superestructura radical ergonómico",
+          "category": "Veritatis",
+          "price": 25.93
+        },
+        "quantity": 26
+      },
+      {
+        "product": {
+          "name": "codificar 5ta generación multi-capas",
+          "category": "Culpa",
+          "price": 856.04
+        },
+        "quantity": 90
+      },
+      {
+        "product": {
+          "name": "focus group local digitalizado",
+          "category": "Corporis",
+          "price": 216.56
+        },
+        "quantity": 199
+      },
+      {
+        "product": {
+          "name": "definición estable diverso",
+          "category": "Veritatis",
+          "price": 541.68
+        },
+        "quantity": 143
+      },
+      {
+        "product": {
+          "name": "intranet radical realineado",
+          "category": "Deserunt",
+          "price": 714.38
+        },
+        "quantity": 104
+      },
+      {
+        "product": {
+          "name": "núcleo asíncrona virtual",
+          "category": "Quisquam",
+          "price": 541.54
+        },
+        "quantity": 158
+      },
+      {
+        "product": {
+          "name": "paradigma nueva generación distribuido",
+          "category": "Deserunt",
+          "price": 115.99
+        },
+        "quantity": 191
+      },
+      {
+        "product": {
+          "name": "proceso de mejora orientada a soluciones intuitivo",
+          "category": "Alias",
+          "price": 611.09
+        },
+        "quantity": 39
+      },
+      {
+        "product": {
+          "name": "previsión 24 horas exclusivo",
+          "category": "Veritatis",
+          "price": 222.54
+        },
+        "quantity": 60
+      },
+      {
+        "product": {
+          "name": "jerarquía valor añadido intuitivo",
+          "category": "Alias",
+          "price": 760.01
+        },
+        "quantity": 41
+      },
+      {
+        "product": {
+          "name": "protocolo orientado a objetos seguro",
+          "category": "Harum",
+          "price": 271.4
+        },
+        "quantity": 45
+      },
+      {
+        "product": {
+          "name": "arquitectura tolerante a fallos persistente",
+          "category": "Harum",
+          "price": 578.33
+        },
+        "quantity": 105
+      },
+      {
+        "product": {
+          "name": "implementación incremental implementado",
+          "category": "Alias",
+          "price": 157.08
+        },
+        "quantity": 6
+      },
+      {
+        "product": {
+          "name": "extranet discreta enfocado",
+          "category": "Veritatis",
+          "price": 816.94
+        },
+        "quantity": 45
+      },
+      {
+        "product": {
+          "name": "definición explícita con ingeniería inversa",
+          "category": "Culpa",
+          "price": 227.09
+        },
+        "quantity": 188
+      },
+      {
+        "product": {
+          "name": "array transicional proactivo",
+          "category": "Tempore",
+          "price": 641.23
+        },
+        "quantity": 85
+      },
+      {
+        "product": {
+          "name": "soporte heurística configurable",
+          "category": "Quisquam",
+          "price": 830.26
+        },
+        "quantity": 200
+      },
+      {
+        "product": {
+          "name": "base de datos basado en contenido opcional",
+          "category": "Harum",
+          "price": 402.4
+        },
+        "quantity": 105
+      },
+      {
+        "product": {
+          "name": "enfoque intangible clonado",
+          "category": "Tempore",
+          "price": 232.8
+        },
+        "quantity": 171
+      },
+      {
+        "product": {
+          "name": "emulación 24 horas configurable",
+          "category": "Culpa",
+          "price": 510.14
+        },
+        "quantity": 188
+      },
+      {
+        "product": {
+          "name": "sistema abierto secundaria exclusivo",
+          "category": "Exercitationem",
+          "price": 516.59
+        },
+        "quantity": 63
+      },
+      {
+        "product": {
+          "name": "iniciativa generada por el cliente operativo",
+          "category": "Tempore",
+          "price": 591.32
+        },
+        "quantity": 68
+      },
+      {
+        "product": {
+          "name": "fidelidad homogénea basado en funcionalidad",
+          "category": "Harum",
+          "price": 233.96
+        },
+        "quantity": 40
+      }
+    ]
+  },
+  {
+    "store_name": "Proyectos Ávalos, Caballero y Piña",
+    "address": "Continuación Cedillo 427 Edif. 868 , Depto. 011, Nueva Kiribati, DGO 20450-5331",
+    "employees": [
+      {
+        "first_name": "Abel",
+        "last_name": "Solís",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Wilfrido",
+        "last_name": "Castellanos",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Carolina",
+        "last_name": "Espinosa",
+        "position": "Gerente"
+      },
+      {
+        "first_name": "Pascual",
+        "last_name": "Abrego",
+        "position": "Cajero"
+      },
+      {
+        "first_name": "Martha",
+        "last_name": "Quintanilla",
+        "position": "Cajero"
+      }
+    ],
+    "inventory": [
+      {
+        "product": {
+          "name": "instalación global llave pública",
+          "category": "Harum",
+          "price": 454.23
+        },
+        "quantity": 184
+      },
+      {
+        "product": {
+          "name": "capacidad móvil multiplataforma",
+          "category": "Harum",
+          "price": 281.48
+        },
+        "quantity": 189
+      },
+      {
+        "product": {
+          "name": "estrategia recíproca visionario",
+          "category": "Quisquam",
+          "price": 431.29
+        },
+        "quantity": 188
+      },
+      {
+        "product": {
+          "name": "base de datos estable preventivo",
+          "category": "Deserunt",
+          "price": 91.5
+        },
+        "quantity": 171
+      },
+      {
+        "product": {
+          "name": "portal dinámica multilateral",
+          "category": "Veritatis",
+          "price": 683.3
+        },
+        "quantity": 50
+      },
+      {
+        "product": {
+          "name": "definición sistémica multi-capas",
+          "category": "Et",
+          "price": 637.51
+        },
+        "quantity": 93
+      },
+      {
+        "product": {
+          "name": "emulación interactiva clonado",
+          "category": "Culpa",
+          "price": 774.2
+        },
+        "quantity": 110
+      },
+      {
+        "product": {
+          "name": "conglomeración global seguro",
+          "category": "Tempore",
+          "price": 861.48
+        },
+        "quantity": 17
+      },
+      {
+        "product": {
+          "name": "función basado en necesidades exclusivo",
+          "category": "Corporis",
+          "price": 398.65
+        },
+        "quantity": 170
+      },
+      {
+        "product": {
+          "name": "arquitectura modular orgánico",
+          "category": "Deserunt",
+          "price": 806.02
+        },
+        "quantity": 84
+      },
+      {
+        "product": {
+          "name": "definición tiempo real perseverante",
+          "category": "Et",
+          "price": 166.84
+        },
+        "quantity": 159
+      },
+      {
+        "product": {
+          "name": "enfoque intangible clonado",
+          "category": "Tempore",
+          "price": 232.8
+        },
+        "quantity": 80
+      },
+      {
+        "product": {
+          "name": "línea segura 4ta generación total",
+          "category": "Veritatis",
+          "price": 678.32
+        },
+        "quantity": 169
+      },
+      {
+        "product": {
+          "name": "aplicación estable avanzado",
+          "category": "Veritatis",
+          "price": 964.54
+        },
+        "quantity": 31
+      },
+      {
+        "product": {
+          "name": "iniciativa heurística total",
+          "category": "Harum",
+          "price": 50.6
+        },
+        "quantity": 184
+      },
+      {
+        "product": {
+          "name": "habilidad uniforme en red",
+          "category": "Culpa",
+          "price": 511.98
+        },
+        "quantity": 76
+      },
+      {
+        "product": {
+          "name": "mediante coherente compartible",
+          "category": "Et",
+          "price": 876.99
+        },
+        "quantity": 129
+      },
+      {
+        "product": {
+          "name": "circuito regional reducido",
+          "category": "Veritatis",
+          "price": 273.6
+        },
+        "quantity": 79
+      },
+      {
+        "product": {
+          "name": "previsión basado en contenido basado en funcionalidad",
+          "category": "Veritatis",
+          "price": 202.84
+        },
+        "quantity": 170
+      },
+      {
+        "product": {
+          "name": "migración innovadora configurable",
+          "category": "Veritatis",
+          "price": 169.3
+        },
+        "quantity": 104
+      },
+      {
+        "product": {
+          "name": "superestructura radical ergonómico",
+          "category": "Veritatis",
+          "price": 25.93
+        },
+        "quantity": 83
+      },
+      {
+        "product": {
+          "name": "estructura de precios explícita versátil",
+          "category": "Alias",
+          "price": 972.03
+        },
+        "quantity": 103
+      },
+      {
+        "product": {
+          "name": "intranet radical realineado",
+          "category": "Deserunt",
+          "price": 714.38
+        },
+        "quantity": 178
+      },
+      {
+        "product": {
+          "name": "codificar asíncrona balanceado",
+          "category": "Veritatis",
+          "price": 842.46
+        },
+        "quantity": 75
+      },
+      {
+        "product": {
+          "name": "matrices estática personalizable",
+          "category": "Deserunt",
+          "price": 873.07
+        },
+        "quantity": 141
+      },
+      {
+        "product": {
+          "name": "definición multimedia clonado",
+          "category": "Et",
+          "price": 995.17
+        },
+        "quantity": 32
+      },
+      {
+        "product": {
+          "name": "estructura de precios homogénea optimizado",
+          "category": "Et",
+          "price": 957.43
+        },
+        "quantity": 49
+      },
+      {
+        "product": {
+          "name": "proyecto nacional centrado en el usuario",
+          "category": "Harum",
+          "price": 536.47
+        },
+        "quantity": 107
+      },
+      {
+        "product": {
+          "name": "línea segura generado por la demanda compartible",
+          "category": "Et",
+          "price": 886.02
+        },
+        "quantity": 170
+      },
+      {
+        "product": {
+          "name": "fuerza de trabajo tangible actualizable",
+          "category": "Quisquam",
+          "price": 918.9
+        },
+        "quantity": 97
+      },
+      {
+        "product": {
+          "name": "sistema abierto secundaria exclusivo",
+          "category": "Exercitationem",
+          "price": 516.59
+        },
+        "quantity": 173
+      },
+      {
+        "product": {
+          "name": "núcleo asíncrona virtual",
+          "category": "Quisquam",
+          "price": 541.54
+        },
+        "quantity": 191
+      },
+      {
+        "product": {
+          "name": "inteligencia artificial bidireccional recontextualizado",
+          "category": "Deserunt",
+          "price": 598.43
+        },
+        "quantity": 44
+      },
+      {
+        "product": {
+          "name": "extranet discreta enfocado",
+          "category": "Veritatis",
+          "price": 816.94
+        },
+        "quantity": 157
+      },
+      {
+        "product": {
+          "name": "protocolo orientado a objetos seguro",
+          "category": "Harum",
+          "price": 271.4
+        },
+        "quantity": 145
+      },
+      {
+        "product": {
+          "name": "utilización tolerancia cero clonado",
+          "category": "Exercitationem",
+          "price": 871.17
+        },
+        "quantity": 77
+      },
+      {
+        "product": {
+          "name": "modelo innovadora reactivo",
+          "category": "Tempore",
+          "price": 327.54
+        },
+        "quantity": 103
+      },
+      {
+        "product": {
+          "name": "array tolerante a fallos expandido",
+          "category": "Harum",
+          "price": 756.49
+        },
+        "quantity": 140
+      },
+      {
+        "product": {
+          "name": "desafío óptima orientado a equipos",
+          "category": "Veritatis",
+          "price": 531.47
+        },
+        "quantity": 0
+      },
+      {
+        "product": {
+          "name": "array analizada digitalizado",
+          "category": "Et",
+          "price": 223.52
+        },
+        "quantity": 77
+      },
+      {
+        "product": {
+          "name": "analista no-volátil compartible",
+          "category": "Et",
+          "price": 699.65
+        },
+        "quantity": 73
+      },
+      {
+        "product": {
+          "name": "analista explícita monitoreado",
+          "category": "Et",
+          "price": 101.23
+        },
+        "quantity": 53
+      },
+      {
+        "product": {
+          "name": "definición explícita con ingeniería inversa",
+          "category": "Culpa",
+          "price": 227.09
+        },
+        "quantity": 110
+      },
+      {
+        "product": {
+          "name": "middleware 24 horas intuitivo",
+          "category": "Alias",
+          "price": 147.16
+        },
+        "quantity": 148
+      },
+      {
+        "product": {
+          "name": "interfaz heurística compatible",
+          "category": "Corporis",
+          "price": 383.23
+        },
+        "quantity": 155
+      },
+      {
+        "product": {
+          "name": "array transicional proactivo",
+          "category": "Tempore",
+          "price": 641.23
+        },
+        "quantity": 167
+      },
+      {
+        "product": {
+          "name": "encriptar alto nivel recontextualizado",
+          "category": "Alias",
+          "price": 377.04
+        },
+        "quantity": 82
+      },
+      {
+        "product": {
+          "name": "aplicación generada por el cliente clonado",
+          "category": "Culpa",
+          "price": 878.62
+        },
+        "quantity": 119
+      },
+      {
+        "product": {
+          "name": "interfaz metódica fundamental",
+          "category": "Deserunt",
+          "price": 167.59
+        },
+        "quantity": 113
+      },
+      {
+        "product": {
+          "name": "focus group local digitalizado",
+          "category": "Corporis",
+          "price": 216.56
+        },
+        "quantity": 113
+      }
+    ]
+  },
+  {
+    "store_name": "Valencia-Palomo S. R.L. de C.V.",
+    "address": "Callejón Malasia 256 342, Vieja Armenia, YUC 37543",
+    "employees": [
+      {
+        "first_name": "Pablo",
+        "last_name": "Estrada",
+        "position": "Cajero"
+      },
+      {
+        "first_name": "Helena",
+        "last_name": "Sarabia",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Lucía",
+        "last_name": "Ojeda",
+        "position": "Cajero"
+      },
+      {
+        "first_name": "Hernán",
+        "last_name": "Llamas",
+        "position": "Cajero"
+      },
+      {
+        "first_name": "Margarita",
+        "last_name": "Gallardo",
+        "position": "Cajero"
+      }
+    ],
+    "inventory": [
+      {
+        "product": {
+          "name": "intranet radical realineado",
+          "category": "Deserunt",
+          "price": 714.38
+        },
+        "quantity": 170
+      },
+      {
+        "product": {
+          "name": "interfaz heurística compatible",
+          "category": "Corporis",
+          "price": 383.23
+        },
+        "quantity": 135
+      },
+      {
+        "product": {
+          "name": "estructura de precios explícita versátil",
+          "category": "Alias",
+          "price": 972.03
+        },
+        "quantity": 143
+      },
+      {
+        "product": {
+          "name": "portal dinámica multilateral",
+          "category": "Veritatis",
+          "price": 683.3
+        },
+        "quantity": 152
+      },
+      {
+        "product": {
+          "name": "enfoque intangible clonado",
+          "category": "Tempore",
+          "price": 232.8
+        },
+        "quantity": 81
+      },
+      {
+        "product": {
+          "name": "soporte heurística configurable",
+          "category": "Quisquam",
+          "price": 830.26
+        },
+        "quantity": 193
+      },
+      {
+        "product": {
+          "name": "aplicación estable avanzado",
+          "category": "Veritatis",
+          "price": 964.54
+        },
+        "quantity": 113
+      },
+      {
+        "product": {
+          "name": "iniciativa generada por el cliente operativo",
+          "category": "Tempore",
+          "price": 591.32
+        },
+        "quantity": 156
+      },
+      {
+        "product": {
+          "name": "array analizada digitalizado",
+          "category": "Et",
+          "price": 223.52
+        },
+        "quantity": 184
+      },
+      {
+        "product": {
+          "name": "enfoque regional multiplataforma",
+          "category": "Harum",
+          "price": 670.63
+        },
+        "quantity": 129
+      },
+      {
+        "product": {
+          "name": "enfoque terciaria sincronizado",
+          "category": "Tempore",
+          "price": 12.15
+        },
+        "quantity": 109
+      },
+      {
+        "product": {
+          "name": "red de area local direccional administrado",
+          "category": "Veritatis",
+          "price": 661.45
+        },
+        "quantity": 140
+      },
+      {
+        "product": {
+          "name": "extranet discreta enfocado",
+          "category": "Veritatis",
+          "price": 816.94
+        },
+        "quantity": 114
+      },
+      {
+        "product": {
+          "name": "mediante coherente compartible",
+          "category": "Et",
+          "price": 876.99
+        },
+        "quantity": 40
+      },
+      {
+        "product": {
+          "name": "jerarquía valor añadido intuitivo",
+          "category": "Alias",
+          "price": 760.01
+        },
+        "quantity": 190
+      },
+      {
+        "product": {
+          "name": "estructura no-volátil en toda la empresa",
+          "category": "Exercitationem",
+          "price": 213.46
+        },
+        "quantity": 121
+      },
+      {
+        "product": {
+          "name": "arquitectura modular orgánico",
+          "category": "Deserunt",
+          "price": 806.02
+        },
+        "quantity": 115
+      },
+      {
+        "product": {
+          "name": "definición sistémica multi-capas",
+          "category": "Et",
+          "price": 637.51
+        },
+        "quantity": 66
+      },
+      {
+        "product": {
+          "name": "emulación interactiva clonado",
+          "category": "Culpa",
+          "price": 774.2
+        },
+        "quantity": 192
+      },
+      {
+        "product": {
+          "name": "iniciativa alto nivel llave pública",
+          "category": "Veritatis",
+          "price": 731.08
+        },
+        "quantity": 63
+      },
+      {
+        "product": {
+          "name": "línea segura 4ta generación total",
+          "category": "Veritatis",
+          "price": 678.32
+        },
+        "quantity": 163
+      },
+      {
+        "product": {
+          "name": "emulación nueva generación versátil",
+          "category": "Culpa",
+          "price": 36.62
+        },
+        "quantity": 70
+      },
+      {
+        "product": {
+          "name": "flexibilidad sensible al contexto innovador",
+          "category": "Culpa",
+          "price": 703.31
+        },
+        "quantity": 196
+      },
+      {
+        "product": {
+          "name": "sistema abierto secundaria exclusivo",
+          "category": "Exercitationem",
+          "price": 516.59
+        },
+        "quantity": 199
+      },
+      {
+        "product": {
+          "name": "soporte cliente-servidor enfocado al cliente",
+          "category": "Corporis",
+          "price": 422.42
+        },
+        "quantity": 133
+      },
+      {
+        "product": {
+          "name": "conglomeración global seguro",
+          "category": "Tempore",
+          "price": 861.48
+        },
+        "quantity": 124
+      },
+      {
+        "product": {
+          "name": "implementación incremental implementado",
+          "category": "Alias",
+          "price": 157.08
+        },
+        "quantity": 160
+      },
+      {
+        "product": {
+          "name": "iniciativa heurística total",
+          "category": "Harum",
+          "price": 50.6
+        },
+        "quantity": 61
+      },
+      {
+        "product": {
+          "name": "base de datos basado en contenido opcional",
+          "category": "Harum",
+          "price": 402.4
+        },
+        "quantity": 70
+      },
+      {
+        "product": {
+          "name": "extranet ejecutiva compatible",
+          "category": "Tempore",
+          "price": 162.37
+        },
+        "quantity": 112
+      },
+      {
+        "product": {
+          "name": "habilidad uniforme en red",
+          "category": "Culpa",
+          "price": 511.98
+        },
+        "quantity": 19
+      },
+      {
+        "product": {
+          "name": "aplicación generada por el cliente clonado",
+          "category": "Culpa",
+          "price": 878.62
+        },
+        "quantity": 182
+      },
+      {
+        "product": {
+          "name": "política nueva generación mejorado",
+          "category": "Alias",
+          "price": 767.01
+        },
+        "quantity": 73
+      },
+      {
+        "product": {
+          "name": "array transicional proactivo",
+          "category": "Tempore",
+          "price": 641.23
+        },
+        "quantity": 60
+      },
+      {
+        "product": {
+          "name": "capacidad móvil multiplataforma",
+          "category": "Harum",
+          "price": 281.48
+        },
+        "quantity": 69
+      },
+      {
+        "product": {
+          "name": "enfoque tolerante a fallos universal",
+          "category": "Deserunt",
+          "price": 793.12
+        },
+        "quantity": 85
+      },
+      {
+        "product": {
+          "name": "migración innovadora configurable",
+          "category": "Veritatis",
+          "price": 169.3
+        },
+        "quantity": 81
+      },
+      {
+        "product": {
+          "name": "array tolerante a fallos expandido",
+          "category": "Harum",
+          "price": 756.49
+        },
+        "quantity": 138
+      },
+      {
+        "product": {
+          "name": "hardware monitorizada por red de tamaño adecuado",
+          "category": "Alias",
+          "price": 610.93
+        },
+        "quantity": 20
+      },
+      {
+        "product": {
+          "name": "función basado en necesidades exclusivo",
+          "category": "Corporis",
+          "price": 398.65
+        },
+        "quantity": 35
+      },
+      {
+        "product": {
+          "name": "proyecto nacional centrado en el usuario",
+          "category": "Harum",
+          "price": 536.47
+        },
+        "quantity": 38
+      },
+      {
+        "product": {
+          "name": "definición tiempo real perseverante",
+          "category": "Et",
+          "price": 166.84
+        },
+        "quantity": 59
+      },
+      {
+        "product": {
+          "name": "definición multimedia clonado",
+          "category": "Et",
+          "price": 995.17
+        },
+        "quantity": 98
+      },
+      {
+        "product": {
+          "name": "circuito regional reducido",
+          "category": "Veritatis",
+          "price": 273.6
+        },
+        "quantity": 177
+      },
+      {
+        "product": {
+          "name": "productividad discreta compatible",
+          "category": "Deserunt",
+          "price": 106.7
+        },
+        "quantity": 39
+      },
+      {
+        "product": {
+          "name": "soporte 3ra generación versátil",
+          "category": "Exercitationem",
+          "price": 954.05
+        },
+        "quantity": 180
+      },
+      {
+        "product": {
+          "name": "caja de herramientas nacional de arquitectura abierta",
+          "category": "Veritatis",
+          "price": 604.01
+        },
+        "quantity": 54
+      },
+      {
+        "product": {
+          "name": "intranet discreta personalizable",
+          "category": "Et",
+          "price": 116.31
+        },
+        "quantity": 16
+      },
+      {
+        "product": {
+          "name": "previsión basado en contenido basado en funcionalidad",
+          "category": "Veritatis",
+          "price": 202.84
+        },
+        "quantity": 106
+      },
+      {
+        "product": {
+          "name": "monitorizar 3ra generación digitalizado",
+          "category": "Culpa",
+          "price": 757.0
+        },
+        "quantity": 104
+      }
+    ]
+  },
+  {
+    "store_name": "Despacho Espinoza y Ozuna",
+    "address": "Circuito Montoya 868 Edif. 501 , Depto. 429, San Alfonso de la Montaña, TAMPS 56981-6934",
+    "employees": [
+      {
+        "first_name": "José",
+        "last_name": "Prado",
+        "position": "Cajero"
+      },
+      {
+        "first_name": "Horacio",
+        "last_name": "Paredes",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Zoé",
+        "last_name": "Delgado",
+        "position": "Gerente"
+      },
+      {
+        "first_name": "Enrique",
+        "last_name": "Posada",
+        "position": "Vendedor"
+      },
+      {
+        "first_name": "Nayeli",
+        "last_name": "Rojas",
+        "position": "Cajero"
+      }
+    ],
+    "inventory": [
+      {
+        "product": {
+          "name": "mediante coherente compartible",
+          "category": "Et",
+          "price": 876.99
+        },
+        "quantity": 83
+      },
+      {
+        "product": {
+          "name": "hardware monitorizada por red de tamaño adecuado",
+          "category": "Alias",
+          "price": 610.93
+        },
+        "quantity": 54
+      },
+      {
+        "product": {
+          "name": "línea segura nacional basado en funcionalidad",
+          "category": "Culpa",
+          "price": 681.88
+        },
+        "quantity": 116
+      },
+      {
+        "product": {
+          "name": "implementación incremental implementado",
+          "category": "Alias",
+          "price": 157.08
+        },
+        "quantity": 83
+      },
+      {
+        "product": {
+          "name": "caja de herramientas nacional de arquitectura abierta",
+          "category": "Veritatis",
+          "price": 604.01
+        },
+        "quantity": 86
+      },
+      {
+        "product": {
+          "name": "codificar 5ta generación multi-capas",
+          "category": "Culpa",
+          "price": 856.04
+        },
+        "quantity": 194
+      },
+      {
+        "product": {
+          "name": "sistema abierto secundaria exclusivo",
+          "category": "Exercitationem",
+          "price": 516.59
+        },
+        "quantity": 97
+      },
+      {
+        "product": {
+          "name": "base de datos basado en contenido opcional",
+          "category": "Harum",
+          "price": 402.4
+        },
+        "quantity": 71
+      },
+      {
+        "product": {
+          "name": "intranet discreta personalizable",
+          "category": "Et",
+          "price": 116.31
+        },
+        "quantity": 192
+      },
+      {
+        "product": {
+          "name": "instalación global llave pública",
+          "category": "Harum",
+          "price": 454.23
+        },
+        "quantity": 107
+      },
+      {
+        "product": {
+          "name": "definición explícita con ingeniería inversa",
+          "category": "Culpa",
+          "price": 227.09
+        },
+        "quantity": 64
+      },
+      {
+        "product": {
+          "name": "modelo innovadora reactivo",
+          "category": "Tempore",
+          "price": 327.54
+        },
+        "quantity": 20
+      },
+      {
+        "product": {
+          "name": "estrategia recíproca visionario",
+          "category": "Quisquam",
+          "price": 431.29
+        },
+        "quantity": 120
+      },
+      {
+        "product": {
+          "name": "interfaz misión crítica programable",
+          "category": "Et",
+          "price": 752.12
+        },
+        "quantity": 4
+      },
+      {
+        "product": {
+          "name": "array transicional proactivo",
+          "category": "Tempore",
+          "price": 641.23
+        },
+        "quantity": 191
+      },
+      {
+        "product": {
+          "name": "middleware 24 horas intuitivo",
+          "category": "Alias",
+          "price": 147.16
+        },
+        "quantity": 138
+      },
+      {
+        "product": {
+          "name": "mediante nacional virtual",
+          "category": "Tempore",
+          "price": 232.9
+        },
+        "quantity": 13
+      },
+      {
+        "product": {
+          "name": "fidelidad homogénea basado en funcionalidad",
+          "category": "Harum",
+          "price": 233.96
+        },
+        "quantity": 89
+      },
+      {
+        "product": {
+          "name": "enfoque terciaria sincronizado",
+          "category": "Tempore",
+          "price": 12.15
+        },
+        "quantity": 57
+      },
+      {
+        "product": {
+          "name": "codificar asíncrona balanceado",
+          "category": "Veritatis",
+          "price": 842.46
+        },
+        "quantity": 166
+      },
+      {
+        "product": {
+          "name": "núcleo asíncrona virtual",
+          "category": "Quisquam",
+          "price": 541.54
+        },
+        "quantity": 17
+      },
+      {
+        "product": {
+          "name": "aplicación generada por el cliente clonado",
+          "category": "Culpa",
+          "price": 878.62
+        },
+        "quantity": 199
+      },
+      {
+        "product": {
+          "name": "definición sistémica multi-capas",
+          "category": "Et",
+          "price": 637.51
+        },
+        "quantity": 166
+      },
+      {
+        "product": {
+          "name": "paradigma nueva generación distribuido",
+          "category": "Deserunt",
+          "price": 115.99
+        },
+        "quantity": 10
+      },
+      {
+        "product": {
+          "name": "interfaz local descentralizado",
+          "category": "Corporis",
+          "price": 90.23
+        },
+        "quantity": 193
+      },
+      {
+        "product": {
+          "name": "interfaz metódica fundamental",
+          "category": "Deserunt",
+          "price": 167.59
+        },
+        "quantity": 7
+      },
+      {
+        "product": {
+          "name": "inteligencia artificial bidireccional recontextualizado",
+          "category": "Deserunt",
+          "price": 598.43
+        },
+        "quantity": 63
+      },
+      {
+        "product": {
+          "name": "red de area local multiestado enfocado a la calidad",
+          "category": "Harum",
+          "price": 243.26
+        },
+        "quantity": 51
+      },
+      {
+        "product": {
+          "name": "línea segura 4ta generación total",
+          "category": "Veritatis",
+          "price": 678.32
+        },
+        "quantity": 5
+      },
+      {
+        "product": {
+          "name": "migración innovadora configurable",
+          "category": "Veritatis",
+          "price": 169.3
+        },
+        "quantity": 159
+      },
+      {
+        "product": {
+          "name": "focus group local digitalizado",
+          "category": "Corporis",
+          "price": 216.56
+        },
+        "quantity": 39
+      },
+      {
+        "product": {
+          "name": "habilidad uniforme en red",
+          "category": "Culpa",
+          "price": 511.98
+        },
+        "quantity": 61
+      },
+      {
+        "product": {
+          "name": "soporte heurística configurable",
+          "category": "Quisquam",
+          "price": 830.26
+        },
+        "quantity": 32
+      },
+      {
+        "product": {
+          "name": "enfoque regional multiplataforma",
+          "category": "Harum",
+          "price": 670.63
+        },
+        "quantity": 121
+      },
+      {
+        "product": {
+          "name": "analista explícita monitoreado",
+          "category": "Et",
+          "price": 101.23
+        },
+        "quantity": 171
+      },
+      {
+        "product": {
+          "name": "definición estable diverso",
+          "category": "Veritatis",
+          "price": 541.68
+        },
+        "quantity": 29
+      },
+      {
+        "product": {
+          "name": "concepto estable seguro",
+          "category": "Alias",
+          "price": 997.34
+        },
+        "quantity": 144
+      },
+      {
+        "product": {
+          "name": "complejidad tolerancia cero exclusivo",
+          "category": "Tempore",
+          "price": 843.64
+        },
+        "quantity": 55
+      },
+      {
+        "product": {
+          "name": "array analizada digitalizado",
+          "category": "Et",
+          "price": 223.52
+        },
+        "quantity": 119
+      },
+      {
+        "product": {
+          "name": "arquitectura tolerante a fallos persistente",
+          "category": "Harum",
+          "price": 578.33
+        },
+        "quantity": 179
+      },
+      {
+        "product": {
+          "name": "alianza 4ta generación enfocado al cliente",
+          "category": "Harum",
+          "price": 742.84
+        },
+        "quantity": 65
+      },
+      {
+        "product": {
+          "name": "emulación nueva generación versátil",
+          "category": "Culpa",
+          "price": 36.62
+        },
+        "quantity": 196
+      },
+      {
+        "product": {
+          "name": "firmware estática avanzado",
+          "category": "Quisquam",
+          "price": 913.57
+        },
+        "quantity": 94
+      },
+      {
+        "product": {
+          "name": "interfaz heurística compatible",
+          "category": "Corporis",
+          "price": 383.23
+        },
+        "quantity": 42
+      },
+      {
+        "product": {
+          "name": "previsión basado en contenido basado en funcionalidad",
+          "category": "Veritatis",
+          "price": 202.84
+        },
+        "quantity": 155
+      },
+      {
+        "product": {
+          "name": "definición tiempo real perseverante",
+          "category": "Et",
+          "price": 166.84
+        },
+        "quantity": 155
+      },
+      {
+        "product": {
+          "name": "jerarquía valor añadido intuitivo",
+          "category": "Alias",
+          "price": 760.01
+        },
+        "quantity": 191
+      },
+      {
+        "product": {
+          "name": "soporte 3ra generación versátil",
+          "category": "Exercitationem",
+          "price": 954.05
+        },
+        "quantity": 183
+      },
+      {
+        "product": {
+          "name": "estructura de precios explícita versátil",
+          "category": "Alias",
+          "price": 972.03
+        },
+        "quantity": 29
+      },
+      {
+        "product": {
+          "name": "iniciativa heurística total",
+          "category": "Harum",
+          "price": 50.6
+        },
+        "quantity": 199
+      }
+    ]
+  }
+]

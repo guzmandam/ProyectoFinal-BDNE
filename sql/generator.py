@@ -27,7 +27,10 @@ END_DATE = datetime(2025, 5, 22)
 # ----------------------------------------------------------------------------------
 random.seed(RANDOM_SEED)
 np.random.seed(RANDOM_SEED)
+
 fake = Faker("es_MX")
+Faker.seed(RANDOM_SEED)
+
 fake.add_provider(person)
 fake.add_provider(address)
 fake.add_provider(company)
