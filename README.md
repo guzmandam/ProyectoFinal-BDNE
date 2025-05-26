@@ -449,8 +449,8 @@ LIMIT 10
 
 #### Dashboard
 
-![Dashboard](./docs_assets/dashboard-1.png)
-![Dashboard](./docs_assets/dashboard-2.png)
+![Dashboard](./assets/dashboard-1.png)
+![Dashboard](./assets/dashboard-2.png)
 
 ### Solución de Problemas
 
