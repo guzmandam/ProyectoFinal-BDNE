@@ -1,0 +1,62 @@
+query_id,timestamp,query_name,query_text,execution_time_seconds,rows_returned,status,error_message
+0866831f-7795-471c-8cd1-02596366641f,2025-05-25T22:36:16.863030,resumen_ejecutivo,"SELECT 
+            SUM(s.total_amount) as total_revenue,
+            COUNT(*) as total_transactions,
+            AVG(s.total_amount) as avg_order_value,
+            COUNT(DISTINCT CONCAT(c.first_name, ' ', c.last_name, ' - ', c.email)) as unique_customers
+        FROM Sale s
+        JOIN Customer c ON s.customer_id = c.customer_id
+        WHERE s.sale_timestamp >= CURRENT_DATE - INTERVAL '30 days'",0.263,1,SUCCESS,
+1997d29e-c378-4665-9a39-8e44c40c0182,2025-05-25T22:36:17.132110,ingresos_diarios,"SELECT 
+            DATE(s.sale_timestamp) as sale_date,
+            SUM(s.total_amount) as daily_revenue
+        FROM Sale s
+        WHERE s.sale_timestamp >= CURRENT_DATE - INTERVAL '30 days'
+        GROUP BY DATE(s.sale_timestamp)
+        ORDER BY sale_date",0.004,26,SUCCESS,
+7e6ca5a7-dad2-4fd2-b3e7-7c6bfaf52468,2025-05-25T22:36:17.144497,productos_principales,"SELECT 
+            p.name as product_name,
+            SUM(sl.line_total) as total_revenue
+        FROM SaleLine sl
+        JOIN Product p ON sl.product_id = p.product_id
+        GROUP BY p.product_id, p.name
+        ORDER BY total_revenue DESC
+        LIMIT 10",0.076,10,SUCCESS,
+ce4b7961-e247-49a4-adb9-0f153d635e82,2025-05-25T22:36:17.227445,ventas_por_tienda,"SELECT 
+            st.name as store_name,
+            SUM(s.total_amount) as total_revenue,
+            COUNT(*) as transaction_count
+        FROM Sale s
+        JOIN Store st ON s.store_id = st.store_id
+        GROUP BY st.store_id, st.name
+        ORDER BY total_revenue DESC",0.013,5,SUCCESS,
+b8daf5a4-4a91-46ce-8287-445b3d9a5ac1,2025-05-25T22:36:17.251464,ingresos_por_categoria,"SELECT 
+            c.name as category,
+            SUM(sl.line_total) as category_revenue
+        FROM SaleLine sl
+        JOIN Product p ON sl.product_id = p.product_id
+        JOIN Category c ON p.category_id = c.category_id
+        GROUP BY c.category_id, c.name
+        ORDER BY category_revenue DESC",0.06,10,SUCCESS,
+7102dde4-afd4-4d86-ad65-3b175bf82137,2025-05-25T22:36:17.320411,empleados_principales,"SELECT 
+            CONCAT(e.first_name, ' ', e.last_name) as employee_name,
+            st.name as store_name,
+            SUM(s.total_amount) as total_sales,
+            COUNT(*) as transactions_handled,
+            ROUND(AVG(s.total_amount), 2) as avg_sale_amount
+        FROM Sale s
+        JOIN Employee e ON s.employee_id = e.employee_id
+        JOIN Store st ON s.store_id = st.store_id
+        GROUP BY e.employee_id, e.first_name, e.last_name, st.name
+        ORDER BY total_sales DESC
+        LIMIT 10",0.034,10,SUCCESS,
+bd067767-259d-4d11-9e14-c96e745f2d32,2025-05-25T22:36:17.362175,rendimiento_tiendas,"SELECT 
+            st.name as store_name,
+            SUM(s.total_amount) as total_revenue,
+            COUNT(*) as total_transactions,
+            COUNT(DISTINCT s.customer_id) as unique_customers,
+            ROUND(AVG(s.total_amount), 2) as avg_transaction_value
+        FROM Sale s
+        JOIN Store st ON s.store_id = st.store_id
+        GROUP BY st.store_id, st.name
+        ORDER BY total_revenue DESC",0.021,5,SUCCESS,

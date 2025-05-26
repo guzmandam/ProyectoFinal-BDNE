@@ -1,0 +1,265 @@
+query_id,timestamp,query_text,execution_time_seconds,rows_returned,bytes_processed,status,error_message
+e8d0d59f-fa74-4575-978c-171907fa7717,2025-05-25T22:00:43.803858,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",3.414,1,1632074,SUCCESS,
+3a3f88de-608c-45b5-9e40-6fcf2bd03dc6,2025-05-25T22:00:47.224390,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.465,26,740000,SUCCESS,
+2c730c04-837c-4790-897f-14a107bd461d,2025-05-25T22:00:53.866442,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",19.305,1,1632074,SUCCESS,
+dc4a415d-e5e9-420b-9b06-322df314256c,2025-05-25T22:01:13.175357,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.348,26,740000,SUCCESS,
+7b590493-085c-46ad-8376-73feb1be139b,2025-05-25T22:01:19.813590,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",3.13,1,1632074,SUCCESS,
+247329e4-f6b1-49a7-8156-e96df3833994,2025-05-25T22:01:22.946614,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.09,26,740000,SUCCESS,
+9a0bb296-279d-4d42-989b-89a1d8ca0e30,2025-05-25T22:01:32.406420,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",2.208,1,1632074,SUCCESS,
+25ca4f0d-4808-4475-8fa3-504c289dcb24,2025-05-25T22:01:34.618196,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.239,26,740000,SUCCESS,
+54bd8334-4170-4503-a67c-9c3152b15c53,2025-05-25T22:01:35.862749,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",0.79,10,0,SUCCESS,
+6eec78d7-a550-44ac-a7e4-0b2d6cf67c0a,2025-05-25T22:01:41.623345,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",4.181,1,1632074,SUCCESS,
+92d24f27-c7d4-4d47-bc78-cabd15248565,2025-05-25T22:01:45.807713,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.212,26,740000,SUCCESS,
+2eb5657f-2998-4e31-9572-e948735bcc91,2025-05-25T22:01:47.026005,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",1.041,10,0,SUCCESS,
+67c0619d-25fe-44a8-8fb9-3efcb40e43f4,2025-05-25T22:01:55.337850,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",7.696,1,1632074,SUCCESS,
+cc62a3db-e820-40ce-ab93-15350c186e34,2025-05-25T22:02:03.038748,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.506,26,740000,SUCCESS,
+34c006a2-c50f-4128-af86-46985e2d7496,2025-05-25T22:02:09.590337,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",1.842,1,1632074,SUCCESS,
+ab78c243-9ac7-41da-8db8-dfe4c3366fff,2025-05-25T22:02:11.433746,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.092,26,740000,SUCCESS,
+6d794cd9-ad0d-44d7-b5e7-0f608c8ade9a,2025-05-25T22:02:12.534000,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",0.891,10,0,SUCCESS,
+6710d4f5-94c8-4623-8d1e-5dca306c0c65,2025-05-25T22:02:21.351597,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",14.164,1,1632074,SUCCESS,
+b76a965d-f4e8-47f8-a1ff-ac80f907a2c9,2025-05-25T22:02:35.518795,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.378,26,740000,SUCCESS,
+daf0e949-9614-4318-9b23-b2db0d1a8d23,2025-05-25T22:02:36.899527,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",0.754,10,0,SUCCESS,
+2a83e7f1-7c67-4874-995c-124239639d76,2025-05-25T22:02:42.702098,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",1.896,1,1632074,SUCCESS,
+6b1f9fbf-9df9-4055-a59e-97335d10c162,2025-05-25T22:02:44.599650,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",0.976,26,740000,SUCCESS,
+f67cc7ce-932d-414b-b6c0-a3355b0d1652,2025-05-25T22:02:45.581389,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",0.816,10,0,SUCCESS,
+3c648011-52e4-469e-8b80-655b4a678962,2025-05-25T22:02:53.864188,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",1.55,1,1632074,SUCCESS,
+7e83a93d-93b8-4215-b55b-1098cf987e96,2025-05-25T22:02:55.415920,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.234,26,740000,SUCCESS,
+33c379b8-3b5d-4a48-83ac-c0073850cfde,2025-05-25T22:02:56.655346,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",1.136,10,0,SUCCESS,
+eb5172c3-2eb9-4b7e-b7b3-3a135970961c,2025-05-25T22:03:04.680216,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",-1.099,1,1632074,SUCCESS,
+659673ed-82f5-4d3f-90fd-4934c5eef0b9,2025-05-25T22:03:03.584612,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.034,26,740000,SUCCESS,
+a638ea13-7b88-47ff-81c7-44b065fbe812,2025-05-25T22:03:04.626967,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",1.152,10,0,SUCCESS,
+2eaaef19-0d50-4aef-beb2-76753d8f3b56,2025-05-25T22:03:12.924401,"-- resumen_ejecutivo
+SELECT 
+                SUM(total_amount) as total_revenue,
+                COUNT(*) as total_transactions,
+                AVG(total_amount) as avg_order_value,
+                COUNT(DISTINCT CONCAT(customer.first_name, customer.last_name, customer.email)) as unique_customers
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)",1.797,1,1632074,SUCCESS,
+3ab5a090-d265-45e4-a4eb-0ba75166af0c,2025-05-25T22:03:14.726146,"-- ingresos_diarios
+SELECT 
+                DATE(TIMESTAMP(timestamp)) as sale_date,
+                SUM(total_amount) as daily_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`
+            WHERE DATE(TIMESTAMP(timestamp)) >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+            GROUP BY sale_date
+            ORDER BY sale_date",1.458,26,740000,SUCCESS,
+33e24883-c23c-4a48-9f61-8e0ba9543ec5,2025-05-25T22:03:16.189356,"-- productos_principales
+SELECT 
+                line.product.name as product_name,
+                SUM(line.line_total) as total_revenue
+            FROM `proyectofinalbdne.commerce_doc.sales`,
+            UNNEST(lines) as line
+            GROUP BY line.product.name
+            ORDER BY total_revenue DESC
+            LIMIT 10",0.775,10,0,SUCCESS,

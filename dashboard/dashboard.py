@@ -8,6 +8,7 @@ from typing import List, Dict, Any
 import asyncio
 
 from rxconfig import config
+from .query_tracker import query_tracker
 
 # BigQuery Configuration
 PROJECT = "proyectofinalbdne"
@@ -59,6 +60,9 @@ class DashboardState(rx.State):
             await self.load_tables_data(client)
             
             self.last_updated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            # Mostrar estadísticas de consultas
+            # query_tracker.print_stats()
             
         except Exception as e:
             print(f"Error cargando datos del dashboard: {e}")

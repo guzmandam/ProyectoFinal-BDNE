@@ -135,7 +135,6 @@ def main():
     print()
     print("🎉 All tests passed! Your dashboard should work correctly.")
     print("\nNext steps:")
-    print("1. cd pablito")
     print("2. reflex run")
     print("3. Open http://localhost:3000")
 
