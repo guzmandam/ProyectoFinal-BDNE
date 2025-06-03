@@ -36,8 +36,25 @@ services:
     volumes:
       - mongo_data:/data/db
 
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j_benchmark
+    restart: unless-stopped
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/MyStrongPassword25
+      - NEO4JLABS_PLUGINS=["apoc"]
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_export_file_enabled=true
+    volumes:
+    - neo4j_data:/data
+    - ./graph/graph_csv:/var/lib/neo4j/import
+
 volumes:
   pg_data:
   pg_data_json:
   mongo_data:
+  neo4j_data:
 

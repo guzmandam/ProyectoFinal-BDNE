@@ -1,0 +1,5 @@
+query,seconds
+sql_query,0.06999888800055487
+cypher_full_path,0.03479008800059091
+cypher_customer_to_product,0.1489911540011235
+cypher_customer_sales_simple,0.2900227390018699
