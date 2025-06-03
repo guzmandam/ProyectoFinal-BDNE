@@ -24,9 +24,14 @@
    - [BigQuery Tracking](#tracking-de-consultas-bigquery)
    - [PostgreSQL Dashboard](#dashboard-postgresql)
    - [Análisis Comparativo](#análisis-comparativo-sql-vs-nosql)
-9. [Desarrollo y Personalización](#desarrollo-y-personalización)
-10. [Solución de Problemas](#solución-de-problemas)
-11. [Consideraciones de Rendimiento](#consideraciones-de-rendimiento)
+9. [Base de Datos de Grafos con Neo4j](#base-de-datos-de-grafos-con-neo4j)
+   - [Arquitectura del Grafo](#arquitectura-del-grafo)
+   - [Ingesta de Datos](#ingesta-de-datos-a-neo4j)
+   - [Benchmarks PostgreSQL vs Neo4j](#benchmarks-postgresql-vs-neo4j)
+   - [Análisis de Consultas de Grafos](#análisis-de-consultas-de-grafos)
+10. [Desarrollo y Personalización](#desarrollo-y-personalización)
+11. [Solución de Problemas](#solución-de-problemas)
+12. [Consideraciones de Rendimiento](#consideraciones-de-rendimiento)
 
 ---
 
@@ -192,8 +197,8 @@ docker exec -it mongo_benchmark mongosh commerce
 
 - **Docker**: >= 20.10
 - **Docker Compose**: >= 2.0
-- **Puertos disponibles**: 5432, 5433, 27017
-- **Espacio en disco**: ~2GB para datos de prueba completos
+- **Puertos disponibles**: 5432, 5433, 27017, 7474, 7687
+- **Espacio en disco**: ~3GB para datos de prueba completos (incluyendo Neo4j)
 
 ## Benchmark de Ingesta
 
@@ -665,6 +670,260 @@ python view_postgres_stats.py compare
 ================================================================================
 ```
 
+## Base de Datos de Grafos con Neo4j
+
+El proyecto incluye una implementación completa de base de datos de grafos usando Neo4j, permitiendo análisis de relaciones complejas y comparación de rendimiento contra bases de datos relacionales tradicionales.
+
+### Arquitectura del Grafo
+
+#### 🏗️ Modelo de Datos de Grafo
+
+El esquema de grafos replica el modelo relacional con las siguientes entidades y relaciones:
+
+##### Nodos (Entities):
+- **`:Customer`** - Clientes con propiedades: `id`, `first_name`, `last_name`, `email`
+- **`:Sale`** - Ventas con propiedades: `id`, `timestamp`, `total`
+- **`:Line`** - Líneas de venta con propiedades: `id`, `quantity`, `unit_price`, `line_total`
+- **`:Product`** - Productos con propiedades: `id`, `name`, `price`
+- **`:Category`** - Categorías con propiedades: `id`, `name`
+- **`:Store`** - Tiendas con propiedades: `id`, `name`, `address`
+- **`:Employee`** - Empleados con propiedades: `id`, `first_name`, `last_name`, `position`
+
+##### Relaciones (Relationships):
+- **`:PLACED`** - `(Customer)-[:PLACED]->(Sale)`
+- **`:CONTAINS`** - `(Sale)-[:CONTAINS]->(Line)`
+- **`:OF_PRODUCT`** - `(Line)-[:OF_PRODUCT]->(Product)`
+- **`:IN_CATEGORY`** - `(Product)-[:IN_CATEGORY]->(Category)`
+- **`:HAPPENED_AT`** - `(Sale)-[:HAPPENED_AT]->(Store)`
+- **`:HANDLED_BY`** - `(Sale)-[:HANDLED_BY]->(Employee)`
+- **`:WORKS_AT`** - `(Employee)-[:WORKS_AT]->(Store)`
+- **`:STOCKS`** - `(Store)-[:STOCKS]->(Product)` con propiedad `qty`
+
+#### 🗺️ Diagrama del Grafo
+
+```
+(Customer)-[:PLACED]->(Sale)-[:CONTAINS]->(Line)-[:OF_PRODUCT]->(Product)-[:IN_CATEGORY]->(Category)
+                        |                                          ^
+                        |-[:HAPPENED_AT]->(Store)-[:STOCKS]--------|
+                        |                    ^
+                        |-[:HANDLED_BY]->(Employee)-[:WORKS_AT]-----|
+```
+
+### Ingesta de Datos a Neo4j
+
+#### 🔄 Proceso de Migración
+
+El sistema incluye un pipeline completo para migrar datos de PostgreSQL a Neo4j:
+
+##### 1. Exportación desde PostgreSQL (`export_to_csv.py`)
+```bash
+cd graph/
+python export_to_csv.py
+```
+
+**Archivos CSV Generados:**
+- **Nodos**: `nodes_category.csv`, `nodes_product.csv`, `nodes_store.csv`, `nodes_employee.csv`, `nodes_customer.csv`, `nodes_sale.csv`, `nodes_line.csv`
+- **Relaciones**: `rels_product_category.csv`, `rels_sale_line.csv`, `rels_line_product.csv`, `rels_customer_sale.csv`, `rels_sale_store.csv`, `rels_sale_employee.csv`, `rels_employee_store.csv`, `rels_store_product_qty.csv`
+
+##### 2. Carga Masiva a Neo4j
+
+**Opción A: Carga Python (Recomendado)**
+```bash
+pip install neo4j tqdm pandas
+python ingest_neo4j.py
+```
+
+**Características de la Carga Python:**
+- **Procesamiento por lotes**: 500 filas por transacción para optimizar memoria
+- **Gestión de transacciones**: Cada archivo en transacciones separadas
+- **Manejo de errores**: Rollback automático en caso de falla
+- **Progreso visual**: Indicadores de progreso con `tqdm`
+- **Tipado automático**: Conversión de tipos (integers, floats, timestamps)
+
+**Opción B: Carga Cypher Directa**
+```bash
+# Copiar archivos CSV al contenedor Neo4j
+docker cp graph_csv/ neo4j_container:/var/lib/neo4j/import/
+
+# Ejecutar en Neo4j Browser
+:source neo4j_load.cypher
+```
+
+#### 🚀 Configuración de Neo4j
+
+##### Docker Compose (Agregar al existente)
+```yaml
+neo4j:
+  image: neo4j:5.15
+  container_name: neo4j_benchmark
+  ports:
+    - "7474:7474"   # HTTP
+    - "7687:7687"   # Bolt
+  environment:
+    NEO4J_AUTH: neo4j/MyStrongPassword25
+    NEO4J_PLUGINS: '["apoc"]'
+    NEO4J_dbms_security_procedures_unrestricted: "apoc.*"
+  volumes:
+    - neo4j_data:/data
+    - neo4j_import:/var/lib/neo4j/import
+```
+
+##### Variables de Entorno
+```bash
+export NEO4J_URI=bolt://localhost:7687
+export NEO4J_USER=neo4j
+export NEO4J_PASSWORD=MyStrongPassword25
+```
+
+### Benchmarks PostgreSQL vs Neo4j
+
+El proyecto incluye benchmarks comprehensivos que comparan consultas complejas entre PostgreSQL y Neo4j, midiendo diferentes tipos de patrones de consulta de grafos.
+
+#### 🏃‍♂️ Ejecución de Benchmarks
+
+```bash
+pip install neo4j psycopg2-binary
+python graph_benchmark.py
+```
+
+#### 📊 Tipos de Consultas Comparadas
+
+##### 1. **Consulta SQL Compleja (PostgreSQL)**
+```sql
+-- Encuentra los top 10 clientes por número de compras en los últimos 24 meses
+-- Recorre: Customer -> Sale -> SaleLine -> Product -> Category
+SELECT c.email, COUNT(*) AS purchases
+FROM   Customer c
+JOIN   Sale s      ON c.customer_id = s.customer_id
+JOIN   SaleLine l  ON s.sale_id = l.sale_id
+JOIN   Product p   ON l.product_id = p.product_id
+JOIN   Category cat ON p.category_id = cat.category_id
+WHERE  s.sale_timestamp >= NOW() - INTERVAL '24 months'
+GROUP  BY c.email
+ORDER  BY purchases DESC
+LIMIT  10;
+```
+
+##### 2. **Consulta Cypher Equivalente (Neo4j)**
+```cypher
+// Consulta equivalente usando relaciones de grafo
+MATCH (c:Customer)-[:PLACED]->(s:Sale)-[:CONTAINS]->(l:Line)-[:OF_PRODUCT]->(p:Product)-[:IN_CATEGORY]->(cat:Category)
+WHERE s.timestamp >= datetime() - duration({months:24})
+RETURN c.email AS email, COUNT(*) AS purchases
+ORDER BY purchases DESC
+LIMIT 10
+```
+
+##### 3. **Consulta de Diversidad de Productos (Neo4j)**
+```cypher
+// Encuentra clientes con mayor variedad de productos únicos
+MATCH (c:Customer)-[:PLACED]->(s:Sale)-[:CONTAINS]->(l:Line)-[:OF_PRODUCT]->(p:Product)
+WHERE s.timestamp >= datetime() - duration({months:24})
+RETURN c.email AS email, COUNT(DISTINCT p) AS unique_products
+ORDER BY unique_products DESC
+LIMIT 10
+```
+
+##### 4. **Consulta Simple de Ventas (Neo4j)**
+```cypher
+// Análisis básico de frecuencia de compra y gasto total
+MATCH (c:Customer)-[:PLACED]->(s:Sale)
+WHERE s.timestamp >= datetime() - duration({months:24})
+RETURN c.email AS email, COUNT(s) AS purchases, SUM(s.total) AS total_spent
+ORDER BY purchases DESC
+LIMIT 10
+```
+
+### Análisis de Consultas de Grafos
+
+#### 📈 Resultados de Rendimiento
+
+**Métricas Típicas (basadas en `graph_times.csv`):**
+
+| Tipo de Consulta | Tecnología | Tiempo (s) | Rendimiento Relativo |
+|------------------|------------|------------|---------------------|
+| **SQL Compleja** | PostgreSQL | 0.070 | 🐘 **Baseline** |
+| **Cypher Path Completo** | Neo4j | 0.035 | 🚀 **2x más rápido** |
+| **Diversidad Productos** | Neo4j | 0.149 | ⚠️ 2.1x más lento |
+| **Ventas Simples** | Neo4j | 0.290 | ⚠️ 4.1x más lento |
+
+#### 🔍 Insights de Rendimiento
+
+##### **Neo4j Ventajas:**
+- **Consultas de Caminos Complejos**: Excelente para traversals multi-hop
+- **Relaciones Implícitas**: Navegación natural sin JOINs explícitos
+- **Análisis de Conectividad**: Ideal para patrones de red y recomendaciones
+- **Escalabilidad de Grafos**: Mejor rendimiento en grafos grandes y complejos
+
+##### **PostgreSQL Ventajas:**
+- **Consultas Simples**: Más eficiente para agregaciones básicas
+- **Optimizaciones Maduras**: Décadas de optimización de query planner
+- **Índices Avanzados**: B-trees, hash indexes, partial indexes
+- **Consultas Ad-hoc**: Mejor para análisis exploratorio
+
+#### 🎯 Casos de Uso Óptimos
+
+##### **Usar Neo4j Para:**
+- **Análisis de Recomendaciones**: "Clientes que compraron esto también compraron..."
+- **Detección de Patrones**: Análisis de comportamiento de compra
+- **Consultas de Conectividad**: Encontrar caminos entre entidades
+- **Análisis de Influencia**: Empleados/tiendas más influyentes
+
+##### **Usar PostgreSQL Para:**
+- **Reportes Financieros**: Agregaciones de ingresos y métricas
+- **Análisis Temporal**: Tendencias y series de tiempo
+- **Consultas OLAP**: Análisis dimensional tradicional
+- **Integraciones Existentes**: Cuando ya tienes infrastructure SQL
+
+#### 🔧 Comandos de Análisis
+
+##### Ver Estadísticas Detalladas
+```bash
+# Ejecutar benchmark completo
+python graph_benchmark.py
+
+# Analizar resultados
+python -c "
+import pandas as pd
+df = pd.read_csv('graph_times.csv')
+print('🏆 ANÁLISIS DE RENDIMIENTO')
+print('='*50)
+for _, row in df.iterrows():
+    print(f'{row.query:<25}: {row.seconds:.3f}s')
+"
+```
+
+##### Consultas de Introspección Neo4j
+```cypher
+// Verificar estructura del grafo
+CALL db.schema.visualization();
+
+// Contar nodos por tipo
+MATCH (n) RETURN labels(n) as tipo, count(n) as cantidad;
+
+// Verificar relaciones disponibles
+CALL db.relationshipTypes() YIELD relationshipType
+RETURN relationshipType ORDER BY relationshipType;
+```
+
+#### 📊 Visualización de Grafos
+
+**Consultas Útiles para Visualización:**
+
+```cypher
+// Muestra de grafo pequeño: Un cliente y sus compras
+MATCH path = (c:Customer {email: "customer1@example.com"})-[:PLACED]->(s:Sale)-[:CONTAINS]->(l:Line)-[:OF_PRODUCT]->(p:Product)
+RETURN path LIMIT 20;
+
+// Red de productos por categoría
+MATCH (p:Product)-[:IN_CATEGORY]->(cat:Category)
+RETURN p, cat LIMIT 50;
+
+// Análisis de empleados y tiendas
+MATCH (e:Employee)-[:WORKS_AT]->(st:Store)<-[:HAPPENED_AT]-(s:Sale)
+RETURN e, st, s LIMIT 30;
+```
+
 ## Desarrollo y Personalización
 
 ### Agregar Nuevos Gráficos
@@ -762,20 +1021,34 @@ pip install --upgrade -r requirements.txt
    python ingest_benchmark.py
    ```
 
-3. **Lanzar dashboard BigQuery**:
+3. **Configurar base de datos de grafos**:
+   ```bash
+   cd graph/
+   python export_to_csv.py
+   python ingest_neo4j.py
+   cd ..
+   ```
+
+4. **Lanzar dashboard BigQuery**:
    ```bash
    reflex run
    ```
 
-4. **Ejecutar análisis PostgreSQL**:
+5. **Ejecutar análisis PostgreSQL**:
    ```bash
    cd sql/
    python postgres_dashboard_queries.py
+   cd ..
    ```
 
-5. **Comparar resultados**:
+6. **Ejecutar benchmarks de grafos**:
+   ```bash
+   python graph_benchmark.py
+   ```
+
+7. **Comparar resultados**:
    ```bash
    python view_postgres_stats.py compare
    ```
 
-¡El proyecto está listo para proporcionar un análisis comprehensivo de SQL vs NoSQL! 🎯
+¡El proyecto está listo para proporcionar un análisis comprehensivo de SQL, NoSQL y Grafos! 🎯📊🔗
